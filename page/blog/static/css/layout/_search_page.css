@@ -1,0 +1,47 @@
+.search-results-page {
+	display: flex;
+	flex-direction: column;
+	width: var(--container-width);
+	margin: 0 auto 100px auto;
+	padding-top: 80px;
+}
+
+.search-results-title {
+	font-size: 24px;
+	font-family: "WorkSans-SemiBold", sans-serif;
+	font-weight: 600;
+	font-style: normal;
+}
+
+.search-form label[for="id_query"] {
+	display: none;
+}
+
+.search-submit-button {
+}
+
+.search-results-list {
+}
+
+.search-results-item {
+}
+
+.search-results-link {
+	text-decoration: none;
+	color: inherit;
+	font-size: 14px;
+	line-height: 2;
+	font-family: "WorkSans-Medium", sans-serif;
+	font-weight: 500;
+	font-style: normal;
+	/* margin: 10px 0 0 0; */
+}
+
+.no-results-message {
+	font-size: 16px;
+	font-family: "WorkSans-Medium", sans-serif;
+	font-weight: 500;
+	line-height: 2;
+	font-style: normal;
+	color: var(--default-explanatory-text-color);
+}

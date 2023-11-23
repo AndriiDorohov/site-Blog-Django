@@ -1,0 +1,28 @@
+{% extends 'base.html' %} {% load static %} {% load i18n %}
+<!-- ------------------------------------------------------------------------------------- -->
+{% block title %}{{ author_name }}: {{ article.title | safe }} {% endblock %}
+<!-- ------------------------------------------------------------------------------------- -->
+{% block content %}
+<div class="search-results-page">
+	<h2 class="search-results-title">Search Results</h2>
+	<!-- <form method="get" action="{% url 'article_search' %}" class="search-form">
+		{{ search_form.as_p }}
+		<button class="search-submit-button" type="submit">Search</button>
+	</form> -->
+
+	{% if articles %}
+	<ul class="search-results-list">
+		{% for article in articles %}
+		<li class="search-results-item">
+			<a class="search-results-link" href="{{ article.get_absolute_url }}"
+				>{{ article.title }}</a
+			>
+		</li>
+		{% endfor %}
+	</ul>
+	{% else %}
+	<p class="no-results-message">No articles found.</p>
+	{% endif %}
+</div>
+
+{% endblock %}

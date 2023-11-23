@@ -1,0 +1,89 @@
+{% extends 'base.html' %} {% load static %} {% load i18n %}
+<!-- ------------------------------------------------------------------------------------- -->
+{% block title %}{{ author_name }}: {{ article.title | safe }} {% endblock %}
+<!-- ------------------------------------------------------------------------------------- -->
+{% block opengraph %}
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="{% static 'js/like.js' %}"></script>
+
+{% endblock %}
+<!-- ------------------------------------------------------------------------------------- -->
+{% block content %}
+<div class="current-post-article-container">
+	<div class="current-article">
+		<div class="current-post-article-category">
+			<a href="{{ article.get_category_url }}">{{ article.category }}</a>
+		</div>
+		<h1 class="current-post-article-title">{{ article.title | safe }}</h1>
+		<div class="current-post-author">
+			<a class="current-post-footer-author" href="{{ article.get_author_url }}"
+				><img
+					class="current-post-footer-avatar"
+					src="{{ article.author.profile.image.url }}"
+					alt="{{ article.author }}"
+				/>{{ article.author }}</a
+			>
+			<p>{{ article.pubdate|date:"F j, Y" }}</p>
+		</div>
+		<img
+			class="current-post-gallery"
+			src="{{ article.og_image.url }}"
+			alt="Photo"
+			width="50%"
+			data-source="{{ article.og_image.url }}"
+		/>
+		<div class="current-post-text">{{ article.full_text | safe }}</div>
+		<div class="current-post-footer">
+			<div class="likely-wrapper">
+				<div class="like-unlike">
+					<!-- ----------------------------------------Like up -->
+					{% if user.is_authenticated %}
+					<form action="{% url 'article_like' article.id %}" method="POST">
+						{% csrf_token %} {% if article_is_liked %}
+						<button
+							type="submit"
+							name="article_id"
+							value="{{ article.id }}"
+							class="btn-no-background"
+						>
+							<img src="{% static 'img/dislike.svg' %}" class="icon" />
+						</button>
+						{% else %}
+						<button
+							type="submit"
+							name="article_id"
+							value="{{ article.id }}"
+							class="btn-no-background"
+						>
+							<img src="{% static 'img/like.svg' %}" class="icon" />
+						</button>
+						{% endif %}
+					</form>
+					{% else %}
+					<a
+						class="btn btn-outline-info"
+						href="{% url 'login' %}?next={{request.path}}"
+						>Log in to like this article!</a
+					><br />
+					{% endif %}
+					<strong class="text-secondary"
+						>{{ number_of_likes }} Like{{ number_of_likes|pluralize }}</strong
+					>
+					<!-- ----------------------------------------Like down -->
+				</div>
+				<!-- <div class="likely">
+					<div class="twitter">{% translate "Tweeter" %}</div>
+					<div class="facebook">{% translate "Share" %}</div>
+					<div class="telegram">{% translate "Sent" %}</div>
+					<div class="whatsapp">{% translate "WhatsApp" %}</div>
+				</div> -->
+			</div>
+		</div>
+	</div>
+	{% include 'partials/comment.html' %}
+</div>
+{% include 'partials/modal.html' %}
+
+<script src="{% static 'js/modal.js' %}" type="module"></script>
+{% endblock %}

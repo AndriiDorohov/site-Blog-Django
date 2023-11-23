@@ -1,0 +1,45 @@
+{% extends 'base.html' %} {% load static %} {% block content %}
+{% include 'partials/hero_post.html' %}
+<div class="page-container">
+
+    {% if user.is_authenticated %}
+		<div class="button-create-post-top">
+    <a href="{% url 'create_article' %}" class="button-create-form">Create post</a>
+		</div>
+    {% endif %}
+
+    <h2 class="latest-post-title">Latest Post</h2>
+        <div class="article-container">
+        {% for article in page %}
+        <div class="article-wrapper">
+            <div class="article-cover">
+                <a href="{{ article.get_absolute_url }}">
+                    <img src="{{ article.og_image.url }}" alt="Photo" width="100%" />
+                </a>
+            </div>
+            <div class="article-details">
+                <div class="article-category">
+                    <a href="{{ article.get_category_url }}">{{ article.category }}</a>
+                </div>
+                <h2 class="article-title">
+                    <a href="{{ article.get_absolute_url }}">{{ article.title | safe }}</a>
+                </h2>
+                <div class="article-footer">
+                    <div class="article-footer-items">
+                        <a class="article-footer-author" href="{{ article.get_author_url }}"><img class="article-footer-avatar" src="{{ article.author.profile.image.url }}" alt="{{ article.author.username }}"> {{ article.author.username }}</a>
+                        <p>{{ article.pubdate|date:"F j, Y" }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    {% if show_pagination %} {% else %} {% include "partials/pagination.html" %} {% endif %}
+    {% if user.is_authenticated %}
+		<div class="button-create-post-bottom">
+    <a href="{% url 'create_article' %}" class="button-create-form">Create post</a>
+		</div>
+    {% endif %}
+</div>
+{% endblock content %}
+</div>

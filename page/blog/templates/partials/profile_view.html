@@ -1,0 +1,198 @@
+{% extends "base.html" %} {% load static %} {% block content %}
+<div class="user-profile">
+	{% include 'partials/hero_form.html' %}
+	<div class="profile-details">
+		<div class="profile-summary">
+			<div class="profile-summary-container">
+				<div class="profile-summary-content">
+					<div class="profile-summary-image">
+						<a href="#">
+							<img src="{{ user.profile.image.url }}" class="summary-img" />
+						</a>
+					</div>
+					<div class="profile-summary-text">
+						<div class="summary-stats">
+							<span class="stats-count">{{ article_count }}</span>
+							<span class="stats-label">Posts</span>
+						</div>
+						<div class="summary-user">
+							<h3>
+								{{ user.username }},<span class="user-since"
+									>{{ user.profile.birth_date | timesince }}</span
+								>
+							</h3>
+							<div class="user-details-loaction">
+								<i class="location-icon"></i>{{ user.profile.location }}
+							</div>
+							<div class="user-details-profession">
+								<i class="profession-icon"></i>{{ user.profile.profession }}
+							</div>
+							<div class="user-details-education">
+								<i class="education-icon"></i>{{ user.profile.education }}
+							</div>
+							<div class="user-profile-social">
+								<div class="hero-author-social">
+									<ul class="hero-author-social-list">
+										{% if user.profile.twitter_url %}
+										<li class="hero-author-social-item">
+											<a href="{{ articles.0.author.profile.twitter_url }}"
+												><img
+													class="hero-author-social-img"
+													src="{% static 'img/button_twitter.svg' %}"
+													alt="Twitter"
+											/></a>
+										</li>
+										{% endif %}
+										{% if user.profile.instagram_url %}
+										<li class="hero-author-social-item">
+											<a href="{{ articles.0.author.profile.instagram_url }}"
+												><img
+													class="hero-author-social-img"
+													src="{% static 'img/button_instagram.svg' %}"
+													alt="Instagram"
+											/></a>
+										</li>
+										{% endif %}
+										{% if user.profile.facebook_url %}
+										<li class="hero-author-social-item">
+											<a href="{{ articles.0.author.profile.facebook_url }}"
+												><img
+													class="hero-author-social-img"
+													src="{% static 'img/button_facebook.svg' %}"
+													alt="Facebook"
+											/></a>
+										</li>
+										{% endif %}
+										{% if user.profile.youtube_url %}
+										<li class="hero-author-social-item">
+											<a href="{{ articles.0.author.profile.youtube_url }}"
+												><img
+													class="hero-author-social-img"
+													src="{% static 'img/button_youtube.svg' %}"
+													alt="YouTube"
+											/></a>
+										</li>
+										{% endif %}
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="profile-actions">
+				<div class="profile-actions-container">
+					<div class="profile-actions-fields">
+					<div class="profile-actions-header">
+						<h3 class="account-heading">My account</h3>
+					</div>
+					<div class="profile-actions-links">
+						 {% comment %} <a href="{% url 'profile' %}" class="edit-profile-link"
+							>Edit Profile</a
+						>  {% endcomment %}
+					</div>
+				</div>
+					<div class="profile-form">
+						<form>
+							<h6 class="user-info-heading">User information</h6>
+							<div class="user-info-fields">
+								<div class="info-fields-container">
+									<div class="info-field">
+										<label class="field-label" for="input-username"
+											>Username</label
+										>
+										<input
+											type="text"
+											id="input-username"
+											class="profile-username-input"
+											placeholder="Username"
+											value="{{ user.profile.user }}"
+											readonly
+										/>
+									</div>
+									<div class="info-field">
+										<label class="field-label" for="input-email"
+											>Email address</label
+										>
+										<input
+											type="email"
+											id="input-email"
+											class="profile-email-input"
+											placeholder="{{ user.profile.email }}"
+											readonly
+										/>
+									</div>
+								</div>
+								<div class="additional-info-fields">
+									<div class="additional-field">
+										<label class="field-label" for="input-first-name"
+											>First name</label
+										>
+										<input
+											type="text"
+											id="input-first-name"
+											class="form-control form-control-alternative"
+											placeholder="First name"
+											value="{{ user.profile.first_name }}"
+											readonly
+										/>
+									</div>
+									<div class="additional-field">
+										<label class="field-label" for="input-last-name"
+											>Last name</label
+										>
+										<input
+											type="text"
+											id="input-last-name"
+											class="form-control form-control-alternative"
+											placeholder="Last name"
+											value="{{ user.profile.last_name }}"
+											readonly
+										/>
+									</div>
+								</div>
+							</div>
+							<hr class="separator" />
+							<h6 class="contact-info-heading">Contact information</h6>
+							<div class="contact-info-fields">
+								<label class="field-label" for="input-address">Address</label>
+								<input
+									id="input-address"
+									class="address-input"
+									placeholder="Home Address"
+									value="{{ user.profile.location }}"
+									type="text"
+									readonly
+								/>
+								<label class="field-label" for="input-city">Telephone</label>
+								<input
+									type="text"
+									id="input-city"
+									class="telephone-input"
+									placeholder="Telephone"
+									value="{{ user.profile.telephone }}"
+									readonly
+								/>
+							</div>
+							<hr class="contact-separator" />
+							<h6 class="about-me-heading">About me</h6>
+
+								<div class="about-me-field">
+									<label class="field-label">About Me</label>
+									<textarea
+										rows="4"
+										class="about-me-textarea"
+										placeholder="A few words about you ..."
+										readonly
+									>
+{{ user.profile.bio }}</textarea
+									>
+								</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	{% endblock content %}
+</div>

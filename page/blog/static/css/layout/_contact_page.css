@@ -1,0 +1,76 @@
+.contact-container {
+	display: flex;
+	width: 800px;
+	margin: 80px auto 80px auto;
+}
+
+.contact-page {
+}
+
+.contact-details-title,
+.contact-form-title,
+.our-mission-title {
+	font-size: 20px;
+	font-weight: 700;
+	margin-bottom: 15px;
+}
+
+.contact-page-title {
+	font-size: 24px;
+	font-weight: 700;
+	margin-bottom: 15px;
+}
+
+.contact-details-text,
+.contact-form-text,
+.our-mission-text {
+	font-size: 16px;
+	font-family: "WorkSans-Regular", sans-serif;
+	font-weight: 400;
+	line-height: 1.5;
+	margin-bottom: 20px;
+	text-indent: 30px;
+}
+
+.contact-info-list {
+	list-style: none;
+	padding: 0;
+}
+
+.contact-info-item {
+	font-size: 16px;
+
+	margin-bottom: 10px;
+}
+
+.contact-form-element {
+	display: flex;
+	flex-direction: column;
+	max-width: 400px;
+}
+
+.contact-label {
+	margin-bottom: 5px;
+}
+
+.contact-input,
+.contact-textarea {
+	padding: 8px;
+	margin-bottom: 15px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+}
+
+.contact-button {
+	padding: 10px 20px;
+	background-color: var(--button-color);
+	color: var(--header-button-text-color);
+	border: none;
+	border-radius: var(--header-button-border-radius);
+	cursor: pointer;
+	transition: background-color 0.3s;
+}
+
+.contact-button:hover {
+	background-color: var(--button-color-hover);
+}

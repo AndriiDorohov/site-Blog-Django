@@ -1,0 +1,59 @@
+{% load static %}
+<section class="hero-author">
+	<div class="hero-author-info">
+		<div class="hero-author-avatar-container">
+			<img
+				class="hero-author-avatar"
+				src="{{ articles.0.author.profile.image.url }}"
+				alt="{{ articles.0.author.username }}"
+			/>
+			<p class="hero-author-username">{{ author }}</p>
+		</div>
+		<div class="hero-author-bio">
+			<p class="hero-author-bio-text">{{ articles.0.author.profile.bio }}</p>
+		</div>
+		<div class="hero-author-social">
+			<ul class="hero-author-social-list">
+				{% if articles.0.author.profile.twitter_url %}
+				<li class="hero-author-social-item">
+					<a href="{{ articles.0.author.profile.twitter_url }}"
+						><img
+							class="hero-author-social-img"
+							src="{% static 'img/button_twitter.svg' %}"
+							alt="Twitter"
+					/></a>
+				</li>
+				{% endif %}
+				{% if articles.0.author.profile.instagram_url %}
+				<li class="hero-author-social-item">
+					<a href="{{ articles.0.author.profile.instagram_url }}"
+						><img
+							class="hero-author-social-img"
+							src="{% static 'img/button_instagram.svg' %}"
+							alt="Instagram"
+					/></a>
+				</li>
+				{% endif %}
+				{% if articles.0.author.profile.facebook_url %}
+				<li class="hero-author-social-item">
+					<a href="{{ articles.0.author.profile.facebook_url }}">
+						<img
+							class="hero-author-social-img"
+							src="{% static 'img/button_facebook.svg' %}"
+							alt="Facebook"
+						/>
+					</a>
+				</li>
+			{% endif %}
+				<li class="hero-author-social-item">
+					<a href="{{ articles.0.author.profile.youtube_url }}"
+						><img
+							class="hero-author-social-img"
+							src="{% static 'img/button_youtube.svg' %}"
+							alt="YouTube"
+					/></a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</section>

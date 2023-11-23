@@ -1,0 +1,25 @@
+{% load i18n %}
+<div class="comments-section">
+	<h2 class="comments-section-title">{% translate "Comments" %}</h2>
+	<ul class="comments-list">
+		{% for comment in comments %}
+		<li class="comment-item">
+			<span class="comment-username">{{ comment.user.username }}:</span>
+			<span class="comment-text">{{ comment.text }}</span>
+		</li>
+		{% empty %}
+		<li class="no-comments-message">{% translate "No comments yet." %}</li>
+		{% endfor %}
+	</ul>
+	{% if user.is_authenticated %}
+	<div class="comment-container">
+		<form method="post" action="{% url 'add_comment' article.id %}">
+			{% csrf_token %}
+			<textarea name="text"></textarea>
+			<button type="submit" class="add-comment-button">
+				{% translate "Add Comment" %}
+			</button>
+		</form>
+	</div>
+	{% endif %}
+</div>

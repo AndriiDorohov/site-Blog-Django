@@ -1,0 +1,125 @@
+{% load static %}
+<header class="page-header">
+	<div class="header-container">
+		<div class="logo-container">
+			<a href="{% url 'home_page' %}" class="logo"
+				><img
+					src="{% static 'img/logo-name.svg' %}"
+					alt="Logo Blog"
+					width="150"
+					height="auto"
+					loading="lazy"
+			/></a>
+		</div>
+		<div class="menu-wrapper">
+			<button
+				type="button"
+				class="mobile-button"
+				aria-expanded="false"
+				aria-controls="menu-container"
+				data-menu-button
+			>
+				<img
+					class="menu-icons icon-close"
+					aria-label="Mobile switcher"
+					src="{% static '/img/ico/close.svg' %}"
+					alt="Close icon"
+					style="width: 40px; height: 40px"
+				/>
+				<img
+					class="menu-icons icon-burger"
+					aria-label="Mobile switcher"
+					src="{% static '/img/ico/burger.svg' %}"
+					alt="Burger icon"
+					style="width: 40px; height: 40px"
+				/>
+			</button>
+
+			<div class="menu-container" id="menu-container" data-menu>
+				<nav class="main-navigation">
+					<ul class="menu-list">
+						<li class="menu-item">
+							<a href="{% url 'home_page' %}" class="menu-link current">Home</a>
+						</li>
+						<li class="menu-item">
+							<a href="{% url 'single_post_page' %}" class="menu-link"
+								>Single Post</a
+							>
+						</li>
+						<li class="menu-item">
+							<a href="{% url 'pages_page' %}" class="menu-link">Pages</a>
+						</li>
+						<li class="menu-item">
+							<a href="{% url 'about_page' %}" class="menu-link">About</a>
+						</li>
+						<li class="menu-item">
+							<a href="{% url 'contact_page' %}" class="menu-link">Contact</a>
+						</li>
+					</ul>
+				</nav>
+				<div class="is-hidden">
+					{% if user.is_authenticated %}
+					<div class="button-item">
+						<a href="{% url 'logout' %}" class="button-link">Logout</a>
+					</div>
+					{% if not '/profile-view/' in request.path %}
+					<div class="button-item">
+						<a href="{% url 'profile-view' %}" class="button-link">Profile</a>
+					</div>
+					{% endif %} {% else %}
+					<div class="button-item">
+						<a href="{% url 'login' %}" class="button-link">Login</a>
+					</div>
+
+					<div class="button-item">
+						<a href="{% url 'registration' %}" class="button-link"
+							>Registration</a
+						>
+					</div>
+					{% endif %}
+				</div>
+				<div class="search-form">
+					<form method="get" action="{% url 'article_search' %}">
+						{{ search_form.query.label_tag }}
+						<div class="search-icon-container">
+							<input
+								name="query"
+								type="text"
+								placeholder="Search"
+								class="search-input"
+							/>
+							<img
+								src="{% static 'img/magnifying-glass-solid.svg' %}"
+								alt="Search Icon"
+								class="img-search-icon"
+							/>
+						</div>
+					</form>
+				</div>
+
+				<!-- -------------------------------------------------------- -->
+			</div>
+			<div class="user-actions">
+				{% if user.is_authenticated %}
+				<div class="button-item">
+					<a href="{% url 'logout' %}" class="button-link">Logout</a>
+				</div>
+				{% if not '/profile-view/' in request.path %}
+				<div class="button-item">
+					<a href="{% url 'profile-view' %}" class="button-link">Profile</a>
+				</div>
+				{% endif %} {% else %}
+				<div class="button-item">
+					<a href="{% url 'login' %}" class="button-link">Login</a>
+				</div>
+
+				<div class="button-item">
+					<a href="{% url 'registration' %}" class="button-link"
+						>Registration</a
+					>
+				</div>
+				{% endif %}
+			</div>
+		</div>
+	</div>
+</header>

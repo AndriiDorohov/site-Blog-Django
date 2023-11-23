@@ -1,0 +1,154 @@
+{% extends 'base.html' %} {% load static %} {% load i18n %}
+<!-- ------------------------------------------------------------------------------------- -->
+{% block title %}{{ author_name }}: {{ article.title | safe }} {% endblock %}
+<!-- ------------------------------------------------------------------------------------- -->
+
+{% block content%}
+<div
+  class=""
+  style="
+    width: 65%;
+    margin: -80px auto 100px auto;
+    background-color: #f1f1f1;
+    box-shadow: 5px 5px 5px #888888;
+    border-radius: 15px;
+  "
+>
+  <h2
+    class="form-title"
+    style="
+      padding-top: 15px;
+      text-align: center;
+      font-family: 'Gelasio', serif;
+    "
+  >
+    ADD ARTICLE
+  </h2>
+
+  <form
+    method="post"
+    enctype="multipart/form-data"
+    action="{% url 'create_article' %}"
+    class="article-form"
+    style="width: 100%; padding: 20px; box-sizing: border-box"
+  >
+    {% csrf_token %}
+
+    <div class="form-group" style="margin-bottom: 10px">
+      <label for="title" style="display: block; margin-bottom: 5px">Title</label>
+      <input
+        type="text"
+        id="title"
+        name="title"
+        class="form-control"
+        placeholder="Title"
+        style="
+          width: 100%;
+          padding: 10px;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          box-sizing: border-box;
+          font-family: 'Gelasio', serif;
+        "
+      />
+    </div>
+
+    <div class="form-group" style="margin-bottom: 10px">
+      <label for="summary" style="display: block; margin-bottom: 5px">Summary</label>
+      <input
+        type="text"
+        id="summary"
+        name="summary"
+        class="form-control"
+        placeholder="Summary"
+        style="
+          width: 100%;
+          padding: 10px;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          box-sizing: border-box;
+          font-family: 'Gelasio', serif;
+        "
+      />
+    </div>
+
+    <div class="form-group" style="margin-bottom: 10px">
+      <label for="full_text" style="display: block; margin-bottom: 5px">Full Text</label>
+      <textarea
+        id="full_text"
+        name="full_text"
+        class="form-control form-control-textarea"
+        placeholder="Full Text"
+        style="
+          width: 100%;
+          height: 150px;
+          resize: vertical;
+          font-family: 'Gelasio', serif;
+        "
+      ></textarea>
+    </div>
+
+    <div class="form-group" style="margin-bottom: 10px">
+      <label for "category" style="display: block; margin-bottom: 5px">Category</label>
+      <input
+        type="text"
+        id="category"
+        name="category"
+        class="form-control"
+        placeholder="Category"
+        style="
+          width: 100%;
+          padding: 10px;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          box-sizing: border-box;
+          font-family: 'Gelasio', serif;
+        "
+      />
+    </div>
+
+    <div class="form-group" style="margin-bottom: 10px">
+      <label for="slug" style="display: block; margin-bottom: 5px">Slug</label>
+      <input
+        type="text"
+        id="slug"
+        name="slug"
+        class="form-control"
+        placeholder="Slug"
+        style="
+          width: 100%;
+          padding: 10px;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          box-sizing: border-box;
+          font-family: 'Gelasio', serif;
+        "
+      />
+    </div>
+
+    <div class="form-group" style="margin-bottom: 10px">
+      <label for="og_image" style="display: block; margin-bottom: 5px">Og Image</label>
+      <input
+        type="file"
+        id="og_image"
+        name="og_image"
+        class="form-control-file"
+        style="padding: 0; font-family: 'Gelasio', serif;"
+      />
+    </div>
+
+    <button type="submit" class="btn btn-primary" style="
+                    display: inline-block;
+                    padding: 10px 20px;
+                    background-color:  #ff6600;
+                    color: #fff;
+                    border: none;
+                    border-radius: 4px;
+                    cursor: pointer;
+                    font-family: 'Gelasio', serif;
+                  ">
+        Add article
+    </button>
+    </form>
+    </div>
+{% endblock %}

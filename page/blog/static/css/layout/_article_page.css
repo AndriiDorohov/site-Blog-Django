@@ -1,0 +1,86 @@
+.current-article {
+	display: flex;
+	flex-direction: column;
+}
+
+.current-post-article-container {
+	display: flex;
+	flex-direction: column;
+	width: 800px;
+	margin: 8px auto 80px;
+}
+
+.current-post-article-category {
+	margin-bottom: 16px;
+}
+
+.current-post-article-category a {
+	background-color: var(--button-color);
+	color: var(--button-text-color);
+	text-decoration: none;
+	height: 32px;
+	padding: 7px 8px 8px 8px;
+	border-radius: var(--header-button-border-radius);
+	font-size: 14px;
+	font-family: "WorkSans-Regular", sans-serif;
+	font-weight: 400;
+	font-style: normal;
+}
+
+.current-post-article-title {
+	font-size: 36px;
+	font-family: "WorkSans-SemiBold", sans-serif;
+	font-weight: 600;
+	font-style: normal;
+	margin: 0;
+	margin-bottom: 20px;
+}
+
+.current-post-author {
+	display: flex;
+	flex-direction: row;
+	justify-content: left;
+	align-items: center;
+	color: var(--default-explanatory-text-color);
+	margin-bottom: 32px;
+}
+
+.current-post-author h3 {
+	font-size: 14px;
+	font-family: "WorkSans-Medium", sans-serif;
+	font-weight: 500;
+	font-style: normal;
+	margin-right: 20px;
+}
+
+.current-post-author p {
+	font-size: 14px;
+	font-family: "WorkSans-Regular", sans-serif;
+	font-weight: 400;
+	font-style: normal;
+}
+
+.current-post-gallery {
+	width: 800px;
+	height: 462px;
+	border-radius: var(--object-border-radius);
+}
+
+.current-post-footer-avatar {
+	border-radius: 50%;
+	width: 24px;
+	height: 24px;
+	margin-right: 12px;
+}
+
+.current-post-footer-author {
+	display: flex;
+	align-items: center;
+	text-decoration: none;
+	font-size: 16px;
+	font-family: "WorkSans-Medium", sans-serif;
+	font-weight: 500;
+	font-style: normal;
+	margin-right: 20px;
+	color: var(--default-explanatory-text-color);
+}

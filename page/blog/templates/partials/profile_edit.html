@@ -1,0 +1,35 @@
+{% extends "base.html" %} {% load static%} {% block content %}
+<div class="user-profile" id="user-profile-edit">
+	{% include 'partials/hero_form.html' %}
+</div>
+
+<div class="content-profile">
+	<div class="profile-user">
+		<div class="profile-image">
+			<img class="user-img" src="{{ user.profile.image.url }}" />
+		</div>
+		<div class="user-details">
+			<h2 class="user-name">{{ user.username }}</h2>
+			<p class="user-email">{{ user.email }}</p>
+		</div>
+	</div>
+	<div class="form-profile-header">
+	</div>
+	<!-- FORM HERE -->
+	<form class="form-profile" method="POST" enctype="multipart/form-data">
+		{% csrf_token %}
+		<fieldset class="form-section-profile">
+			<legend class="section-title-profile">Profile Info</legend>
+			{{ u_form }}
+			<!-- User form -->
+			{{ p_form }}
+			<!-- Profile form -->
+			<div class="form-actions-profile">
+				<button class="btn-update-profile" type="submit">Update</button>
+				<button class="btn-update-profile" id="btn-cancel-profile" type="button">Cancel</button>
+			</div>
+		</fieldset>
+	</form>
+</div>
+<script src="{% static 'js/profile.js' %}"></script>
+{% endblock content %}

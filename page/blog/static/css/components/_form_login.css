@@ -1,0 +1,76 @@
+.form-login-container {
+	display: grid;
+	grid-template-rows: 1fr 4fr;
+	grid-gap: 10px;
+	width: 500px;
+	margin: -200px auto 100px auto;
+	border: var(--form-border-color);
+	border-radius: var(--object-border-radius);
+	background-color: var(--form-lower-bg);
+	padding: 0 100px 50px;
+	box-shadow: var(--main-box-shadow);
+}
+
+.form-login-title {
+	text-align: center;
+	color: var(--form-title-color);
+	font-size: 20px;
+	font-family: var(--font-inter-regular);
+	font-weight: 600;
+	font-style: normal;
+	margin-top: 60px;
+}
+
+.form-login-field {
+}
+
+.form-login-field p label {
+	font-size: 14px;
+	font-family: var(--font-inter-regular);
+	font-weight: 600;
+	color: var(--input-label-color);
+	display: inline-block;
+	margin: 16px 0 8px;
+	line-height: 1.5;
+	text-align: left;
+}
+
+.form-login-button {
+	display: block;
+	width: 40%;
+	padding: 10px;
+	margin: 50px auto 0;
+	border: none;
+	border-radius: var(--header-button-border-radius);
+	background-color: var(--button-color);
+	color: var(--button-text-color);
+	font-size: 16px;
+	font-family: var(--font-inter-regular);
+	font-weight: 500;
+	font-style: normal;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+}
+
+.form-login-button:hover {
+	background-color: var(--button-color-hover);
+}
+
+.form-login-field input[type="text"],
+.form-login-field input[type="password"] {
+	width: 100%;
+	font-size: 16px;
+	font-family: "WorkSans-Medium", sans-serif;
+	font-weight: 500;
+	font-style: normal;
+	padding: 10px;
+	margin-bottom: 10px;
+	border: var(--main-border);
+	border-radius: var(--form-input-border-radius);
+}
+
+.form-login-field input[type="text"] {
+}
+
+.form-login-field input[type="password"] {
+}

@@ -1,0 +1,22 @@
+{% extends 'base.html' %} {% load static %} {% load i18n %}
+<!-- ------------------------------------------------------------------------------------- -->
+{% block title %}{{ author_name }}: {{ article.title | safe }} {% endblock %}
+<!-- ------------------------------------------------------------------------------------- -->
+
+<!-- ------------------------------------------------------------------------------------- -->
+
+{% block content %}
+<div class="user-profile" id="user-profile-edit">
+	{% include 'partials/hero_form.html' %}
+</div>
+
+<div class="form-login-container">
+	<h2 class="form-login-title">LOGIN</h2>
+	<form method="post" class="form-login-field">
+		{% csrf_token %} {{ form.as_p }}
+		<button class="form-login-button" type="submit">Login</button>
+	</form>
+</div>
+<script src="{% static 'js/login.js' %}"></script>
+
+{% endblock %}

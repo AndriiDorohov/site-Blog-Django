@@ -1,0 +1,40 @@
+/* ----------------LIKE---------------- */
+.current-post-footer {
+	display: flex;
+	text-align: left;
+}
+
+/* button {
+	background-color: #262626;
+	color: #fff;
+	border: none;
+	border-radius: 5px;
+	padding: 5px 15px;
+	cursor: pointer;
+} */
+.btn-no-background {
+	background: none;
+	border: none;
+}
+
+.btn-no-background .icon {
+	width: 34px;
+	height: 34px;
+}
+
+.likely-wrapper {
+	display: flex;
+	justify-content: left;
+	align-items: center;
+}
+
+.likely {
+	display: flex;
+}
+
+.like-unlike {
+	display: flex;
+	justify-content: left;
+	align-items: center;
+	flex-direction: column;
+}

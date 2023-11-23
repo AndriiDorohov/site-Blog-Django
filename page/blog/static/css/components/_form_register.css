@@ -1,0 +1,138 @@
+.registration-container {
+	display: grid;
+	grid-template-rows: 1fr 6fr;
+	grid-gap: 10px;
+	align-items: center;
+	flex-direction: column;
+	width: 600px;
+	margin: -200px auto 100px auto;
+	border: var(--form-border-color);
+	border-radius: var(--object-border-radius);
+	background-color: var(--form-lower-bg);
+	padding: 0 50px 50px;
+	box-shadow: var(--main-box-shadow);
+}
+
+.registration-title {
+	text-align: center;
+	color: var(--form-title-color);
+	font-size: 20px;
+	font-family: var(--font-inter-regular);
+	font-weight: 600;
+	font-style: normal;
+	margin-top: 60px;
+}
+
+.registration-form {
+	margin-top: 20px;
+	width: 100%;
+}
+.registration-form-items {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+.registration-button {
+	display: block;
+	width: 40%;
+	padding: 10px;
+	border: none;
+	border-radius: var(--header-button-border-radius);
+	background-color: var(--button-color);
+	color: var(--button-text-color);
+	font-size: 16px;
+	font-family: var(--font-inter-regular);
+	font-weight: 500;
+	font-style: normal;
+	/* cursor: pointer; */
+	transition: background-color 0.3s ease;
+	margin: 20px auto 10px auto;
+}
+
+#registration-cancel-button {
+	display: block;
+	width: 50%;
+	padding: 10px;
+	border: none;
+	border-radius: var(--header-button-border-radius);
+	background-color: var(--button-color);
+	color: var(--button-text-color);
+	font-size: 18px;
+	font-family: "WorkSans-Medium", sans-serif;
+	font-weight: 500;
+	font-style: normal;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+	margin: 20px auto 20px auto;
+}
+.registration-button:hover {
+	background-color: var(--button-color-hover);
+}
+
+.registration-form-fields input[type="text"],
+.registration-form-fields input[type="email"],
+.registration-form-fields input[type="password"] {
+	font-size: 16px;
+	line-height: 1.5;
+	display: block;
+	width: 100%;
+	height: calc(44px + 2px);
+	padding: 10px 12px;
+	box-shadow: var(--input-box-shadow);
+	margin-bottom: 10px;
+	transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+	color: var(--input-text-color);
+	border: 0;
+	border-radius: var(--form-input-border-radius);
+	background-color: var(--input-background-color);
+	overflow: visible;
+	margin: 0;
+}
+.registration-form-fields2 label {
+	font-size: 14px;
+	font-family: var(--font-inter-regular);
+	font-weight: 600;
+	color: var(--default-explanatory-text-color);
+	display: inline-block;
+	margin-bottom: 8px;
+	line-height: 1.5;
+	text-align: left;
+	margin-top: 24px;
+}
+
+.registration-form-fields p label {
+	font-size: 14px;
+	font-family: var(--font-inter-regular);
+	font-weight: 600;
+	color: var(--input-label-color);
+	display: inline-block;
+	margin: 16px 0 8px;
+	line-height: 1.5;
+	text-align: left;
+}
+
+ul.errorlist {
+	list-style: none;
+	padding: 0;
+}
+
+ul.errorlist li {
+	color: red;
+}
+
+.registration-form-fields span.helptext {
+	display: flex;
+	color: var(--default-explanatory-text-color);
+	font-size: 10px;
+	font-family: "WorkSans-Medium", sans-serif;
+	font-weight: 400;
+	margin-top: 10px;
+}
+
+.registration-form-fields ul li {
+	display: flex;
+	color: var(--default-explanatory-text-color);
+	font-size: 10px;
+	font-family: "WorkSans-Medium", sans-serif;
+	font-weight: 400;
+}

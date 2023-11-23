@@ -1,0 +1,108 @@
+html {
+	box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+body {
+	background-color: #ffffff;
+	font-family: "Roboto", sans-serif;
+	overflow: auto;
+	padding-top: 0px;
+
+	font-size: 12px;
+	font-weight: 500;
+	line-height: 1.33;
+}
+
+.section {
+	min-height: calc(70vh - 76px);
+	padding: 20px 0;
+}
+.container {
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+}
+@media screen and (min-width: 320px) {
+	.container {
+		width: 320px;
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+}
+@media screen and (min-width: 768px) {
+	.container {
+		width: 768px;
+		padding-left: 76px;
+		padding-right: 76px;
+	}
+}
+@media screen and (min-width: 1024px) {
+	.container {
+		width: 1024px;
+		padding-left: 71px;
+		padding-right: 71px;
+	}
+}
+img {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+a {
+	font-style: normal;
+	display: inline-block;
+	text-decoration: none;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0;
+	color: #000000;
+}
+
+button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 0;
+
+	border: none;
+	background-color: transparent;
+}
+
+.list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.button {
+	flex-wrap: wrap;
+	border: 1px solid #000000;
+	border-radius: 5px;
+	background-color: transparent;
+	text-transform: uppercase;
+}
+
+.is-hidden {
+	display: none;
+}
+
+.visually-hidden {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	border: 0;
+	padding: 0;
+	clip: rect(0 0 0 0);
+	overflow: hidden;
+}

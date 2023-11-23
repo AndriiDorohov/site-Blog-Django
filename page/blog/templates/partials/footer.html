@@ -1,0 +1,112 @@
+{% load static %}
+<footer class="footer-distributed">
+	<div class="footer-wrapper">
+		<section class="footer-section-1">
+			<div class="footer-left">
+				<p class="footer-company-about">About</p>
+				<p class="footer-company-text">
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+					eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+					minim veniam
+				</p>
+				<p class="footer-email">
+					<span>Email:</span
+					><a href="mailto:dorokhov.andrii@gmail.com">info@jstemplate.net</a>
+				</p>
+				<p class="footer-phone"><span>Phone:</span>880 123 456 789</p>
+			</div>
+
+			<div class="footer-center">
+				<div class="link-list">
+					<h3 class="footer-links">Quick Link</h3>
+					<ul>
+						<li><a href="#" class="link-1">Home</a></li>
+						<li><a href="#">About</a></li>
+						<li><a href="#">Blog</a></li>
+						<li><a href="#">Archived</a></li>
+						<li><a href="#">Author</a></li>
+						<li><a href="#">Contact</a></li>
+					</ul>
+				</div>
+
+				<div class="category-list">
+					<h3 class="footer-links">Popular Category</h3>
+					<ul>
+						<li>
+							<a href="{% url 'category_page' 'Lifestyle' %}">Lifestyle</a>
+						</li>
+						<li>
+							<a href="{% url 'category_page' 'Technology' %}">Technology</a>
+						</li>
+						<li><a href="{% url 'category_page' 'Travel' %}">Travel</a></li>
+						<li><a href="{% url 'category_page' 'Business' %}">Business</a></li>
+						<li><a href="{% url 'category_page' 'Economy' %}">Economy</a></li>
+						<li><a href="{% url 'category_page' 'Sports' %}">Sports</a></li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="footer-right">
+				{% if not user.is_authenticated %}
+				<section class="subscribe-section">
+					<form action="{% url 'subscribe' %}" method="post">
+						<div class="subscribe-form">
+							{% csrf_token %}
+							<div class="subscribe-message">
+								<p class="subscribe-text">Weekly Newsletter</p>
+								<p class="subscribe-text-info">
+									Get blog articles and offers via email
+								</p>
+							</div>
+							<div class="subscribe-input">
+								<input
+									id="name"
+									name="name"
+									class="name-input"
+									placeholder="Your Name"
+									autocomplete="name"
+								/>
+							</div>
+							<div class="subscribe-input">
+								<input
+									id="email"
+									name="email"
+									type="email"
+									class="email-input"
+									placeholder="Email address"
+									autocomplete="email"
+								/>
+							</div>
+							<div class="subscribe-button">
+								<button type="submit" class="subscribe-submit">
+									Subscribe
+									<i class="submit-icon"></i>
+								</button>
+							</div>
+						</div>
+					</form>
+				</section>
+				{% endif %}
+			</div>
+		</section>
+		<hr class="separator" />
+		<section class="footer-section-2">
+			<div class="logo-section">
+				<img src="{% static 'img/logo.svg' %}" alt="" />
+				<div class="meta-info">
+					<p class="footer-company-name">Meta<span>Blog</span></p>
+					<p class="footer-rights">
+						© {{author_name }} {% now "Y" %}. All Rights Reserved.
+					</p>
+				</div>
+			</div>
+			<div class="footer-links">
+				<a href="/terms-of-use">Terms of Use</a>
+				<p>|</p>
+				<a href="/privacy-policy">Privacy Policy</a>
+				<p>|</p>
+				<a href="/cookie-policy">Cookie Policy</a>
+			</div>
+		</section>
+	</div>
+</footer>

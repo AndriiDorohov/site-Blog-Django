@@ -1,0 +1,49 @@
+{% extends 'base.html' %} {% load static %} {% load i18n %}
+
+<!-- ------------------------------------------------------------------------------------- -->
+{% block title %}{{ author_name }}: {{ article.title | safe }} {% endblock %}
+<!-- ------------------------------------------------------------------------------------- -->
+
+{% block content %}
+<div class="container">
+	<h2 class="section-title">About Us</h2>
+
+	<p class="section-description">
+		Welcome to our blog! We believe in the power of words to inspire, open new
+		perspectives, and unite people. Here, you'll find a space where everyone can
+		freely express their thoughts, share their ideas, and discover something
+		new.
+	</p>
+
+	<h3 class="section-subtitle">Our Mission</h3>
+	<p class="section-description">
+		Our goal is to create a space for creativity, exchanging thoughts, and open
+		dialogue. We believe that every thought holds value, and every idea has the
+		potential to change the world. Here, you'll find a variety of topics, from
+		important global issues to personal observations and reflections.
+	</p>
+
+	<h3 class="section-subtitle">Our Community</h3>
+	<p class="section-description">
+		Our blog is a community of diverse individuals: dreamers, scientists,
+		creators, and explorers. We strive for everyone to find something
+		interesting and important here. We welcome anyone who wants to join our
+		community, discuss topics, and share their thoughts.
+	</p>
+
+	<h3 class="section-subtitle">Our Posts</h3>
+	<p class="section-description">
+		Our blog is filled with diverse and engaging posts created by our users.
+		From personal stories to analyses of significant global events, each post is
+		a piece of thought that contributes to our collective understanding of the
+		world.
+	</p>
+
+	<h3 class="section-subtitle">Join Us!</h3>
+	<p class="section-description">
+		We believe that real ideas emerge through dialogue, so join our community,
+		engage in discussions, and share your impressions and ideas. Together, we
+		can create something great!
+	</p>
+</div>
+{% endblock %}

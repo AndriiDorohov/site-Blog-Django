@@ -1,0 +1,32 @@
+.container {
+	max-width: 800px;
+	margin: 80px auto;
+	padding: 20px;
+}
+
+.section-title {
+	text-align: center;
+	font-size: 36px;
+	font-family: "WorkSans-SemiBold", sans-serif;
+	font-weight: 600;
+	font-style: normal;
+	margin-bottom: 10px;
+}
+
+.section-subtitle {
+	text-align: center;
+	font-size: 22px;
+	font-family: "WorkSans-Regular", sans-serif;
+	font-weight: 600;
+	font-style: normal;
+	margin: 20px 20px 10px 0;
+}
+
+.section-description {
+	text-align: justify;
+	margin-bottom: 20px;
+	font-size: 16px;
+	font-family: "WorkSans-Regular", sans-serif;
+	font-weight: 400;
+	font-style: normal;
+}

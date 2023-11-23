@@ -1,0 +1,76 @@
+:root {
+	--font-medium: "WorkSans-Medium", sans-serif;
+	--font-extrabold: "WorkSans-ExtraBold", sans-serif;
+	--font-bold: "WorkSans-Bold", sans-serif;
+	--font-semibold: "WorkSans-SemiBold", sans-serif;
+	--font-regular: "WorkSans-Regular", sans-serif;
+	--font-source-regular: "SourceSerif4-Regular", serif;
+	--font-source-bold-italic: "SourceSerif4-BoldItalic", serif;
+	--font-plusjakarta-regular: "PlusJakartaSans-Regular", sans-serif;
+	--font-plusjakarta-semibold: "PlusJakartaSans-SemiBold", sans-serif;
+	--font-plusjakarta-extrabold: "PlusJakartaSans-ExtraBold", sans-serif;
+	--font-inter-regular: "Inter-Regular", sans-serif;
+
+	--font-size-small: 14px;
+	--font-size-medium: 16px;
+	--font-size-medium-extra: 18px;
+	--font-size-large: 20px;
+	--font-size-xlarge: 24px;
+	--font-size-xxlarge: 32px;
+	--font-size-xxxlarge: 36px;
+
+	--font-regular: 400;
+	--font-weight-medium: 500;
+	--font-weight-extrabold: 800;
+	--font-weight-bold: 700;
+	--font-weight-semibold: 600;
+
+	--category-text-color: #4b6bfb;
+	--footer-article-color: #97989f;
+	--default-explanatory-text-color: #a1a1aa;
+	--hero-category-text-color: #ffffff;
+	--hero-category-background: #4b6bfb;
+	--article-category-background: rgba(75, 107, 251, 0.05);
+	--article-padding: 16px;
+
+	--button-color: #4b6bfb;
+	--button-color-hover: #3a5df9;
+	--button-text-color: #ffffff;
+	--inactive-button-color: #8da0f6;
+	--inactive-button-text-color: #dfdfdf;
+	--header-button-color: #262626;
+	--header-button-border-radius: 6px;
+
+	--form-upper-bg: #fff;
+	--form-lower-bg: #f7fafc;
+	--form-border-color: 1px solid rgba(0, 0, 0, 0.05);
+	--form-border: 1px solid #ccc;
+	--form-title-color: #32325d;
+	--form-hero-text-color: #fff;
+
+	--input-box-shadow: 0 1px 3px rgba(50, 50, 93, 0.15),
+		0 1px 0 rgba(0, 0, 0, 0.02);
+	--input-background-color: #fff;
+	--input-text-color: #8898aa;
+	--input-label-color: #525f7f;
+
+	--main-box-shadow: rgba(24, 26, 42, 0.12) 0px 12px 24px -6px;
+
+	--form-input-border-radius: 6px;
+	--header-button-text-color: #fff;
+	--object-border-radius: 12px;
+	--article-img-radius: 6px;
+	--primary-background-color: #ffffff;
+	--secondary-background-color: #f6f6f7;
+	--main-border: 1px solid #e8e8ea;
+	--button-height: 48px;
+	--article-title-text-color: #181a2a;
+	--page-link-color: rgba(59, 60, 74, 1);
+	--search-form-bg-color: rgba(244, 244, 245, 1);
+	--search-form-hint-text-color: rgb(161, 161, 170);
+
+	--container-width: 1216px;
+	--white-color: #ffffff;
+	--black-color: #000000;
+	/* ------------------------------------------------- */
+}

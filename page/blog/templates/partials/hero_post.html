@@ -1,0 +1,35 @@
+{% load static %}
+<section class="hero-container">
+	<img
+		src="{% static 'img/home_page_bg.jpg' %}"
+		alt="Background Image"
+		class="background-image"
+	/>
+	<div class="hero-article-details">
+		<div class="hero-article-category">
+			<a href="{{ specific_article.get_category_url }}"
+				>{{ specific_article.category }}</a
+			>
+		</div>
+		<h2 class="hero-article-title">
+			<a href="{{ specific_article.get_absolute_url }}"
+				>{{ specific_article.title | safe }}</a
+			>
+		</h2>
+		<div class="hero-article-footer">
+			<div class="hero-article-footer-items">
+				<a
+					class="hero-article-footer-author"
+					href="{{ specific_article.get_author_url }}"
+					><img
+						class="hero-article-footer-avatar"
+						src="{{ specific_article.author.profile.image.url }}"
+						alt="{{ article.author.username }}"
+					/>
+					{{ specific_article.author }}</a
+				>
+				<p>{{ specific_article.pubdate|date:"F j, Y" }}</p>
+			</div>
+		</div>
+	</div>
+</section>

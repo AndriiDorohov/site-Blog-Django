@@ -2,15 +2,15 @@
 
 This project is a Django-based blog platform allowing users to create, publish, and manage articles, manage user profiles, and interact with the content.
 
-[![Preview](https://github.com/AndriiDorohov/site-Blog-Django/raw/main/preview/page_01.png)](https://github.com/AndriiDorohov/site-Blog-Django/blob/main/preview/page_01.png)
-[![Preview](https://github.com/AndriiDorohov/site-Blog-Django/raw/main/preview/page_02.png)](https://github.com/AndriiDorohov/site-Blog-Django/blob/main/preview/page_02.png)
-[![Preview](https://github.com/AndriiDorohov/site-Blog-Django/raw/main/preview/page_03.png)](https://github.com/AndriiDorohov/site-Blog-Django/blob/main/preview/page_03.png)
-[![Preview](https://github.com/AndriiDorohov/site-Blog-Django/raw/main/preview/page_04.png)](https://github.com/AndriiDorohov/site-Blog-Django/blob/main/preview/page_04.png)
-[![Preview](https://github.com/AndriiDorohov/site-Blog-Django/raw/main/preview/page_05.png)](https://github.com/AndriiDorohov/site-Blog-Django/blob/main/preview/page_05.png)
-[![Preview](https://github.com/AndriiDorohov/site-Blog-Django/raw/main/preview/page_06.png)](https://github.com/AndriiDorohov/site-Blog-Django/blob/main/preview/page_06.png)
-[![Preview](https://github.com/AndriiDorohov/site-Blog-Django/raw/main/preview/page_07.png)](https://github.com/AndriiDorohov/site-Blog-Django/blob/main/preview/page_07.png)
-[![Preview](https://github.com/AndriiDorohov/site-Blog-Django/raw/main/preview/page_08.png)](https://github.com/AndriiDorohov/site-Blog-Django/blob/main/preview/page_08.png)
-[![Preview](https://github.com/AndriiDorohov/site-Blog-Django/raw/main/preview/page_09.png)](https://github.com/AndriiDorohov/site-Blog-Django/blob/main/preview/page_09.png)
+[<img src="https://github.com/AndriiDorohov/site-Blog-Django/raw/main/preview/page_01.png" width="200">](https://github.com/AndriiDorohov/site-Blog-Django/blob/main/preview/page_01.png)
+[<img src="https://github.com/AndriiDorohov/site-Blog-Django/raw/main/preview/page_02.png" width="200">](https://github.com/AndriiDorohov/site-Blog-Django/blob/main/preview/page_02.png)
+[<img src="https://github.com/AndriiDorohov/site-Blog-Django/raw/main/preview/page_03.png" width="200">](https://github.com/AndriiDorohov/site-Blog-Django/blob/main/preview/page_03.png)
+[<img src="https://github.com/AndriiDorohov/site-Blog-Django/raw/main/preview/page_04.png" width="200">](https://github.com/AndriiDorohov/site-Blog-Django/blob/main/preview/page_04.png)
+[<img src="https://github.com/AndriiDorohov/site-Blog-Django/raw/main/preview/page_05.png" width="200">](https://github.com/AndriiDorohov/site-Blog-Django/blob/main/preview/page_05.png)
+[<img src="https://github.com/AndriiDorohov/site-Blog-Django/raw/main/preview/page_06.png" width="200">](https://github.com/AndriiDorohov/site-Blog-Django/blob/main/preview/page_06.png)
+[<img src="https://github.com/AndriiDorohov/site-Blog-Django/raw/main/preview/page_07.png" width="200">](https://github.com/AndriiDorohov/site-Blog-Django/blob/main/preview/page_07.png)
+[<img src="https://github.com/AndriiDorohov/site-Blog-Django/raw/main/preview/page_08.png" width="200">](https://github.com/AndriiDorohov/site-Blog-Django/blob/main/preview/page_08.png)
+[<img src="https://github.com/AndriiDorohov/site-Blog-Django/raw/main/preview/page_09.png" width="200">](https://github.com/AndriiDorohov/site-Blog-Django/blob/main/preview/page_09.png)
 
 ## Models
 
